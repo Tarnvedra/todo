@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo List</title>
+<style>
+body {background-color: whitesmoke; }
+h1 {margin-left: 775px;color: black; font-size: 40px}
+a {margin-left: 790px;color: black; font-size: 40px}
+#app {margin-left: 790px;color: black; font-size: 40px}
+</style>
+    
+</head>
+<body>
+ <h1>Todo List</h1>
+ <a href="index.html">Return Home </a>
+<div id="app">
+ <button type="button" onclick="">Add</button>
+ <button type="button" onclick="">Edit</button>
+ <button type="button" onclick="">Delete</button>
+</div>
+
+<script>
+
+function fizzBuzz() {
+
+   
+    i = 1;
+    text = "";
+    while (i <= 100) {
+        if (i % 3 === 0){
+            document.write('fizz number= ' + i + ' ');
+           
+
+        } 
+        if (i % 5 === 0){
+            document.write('buzz number= ' + i + ' ');
+          
+
+        } 
+        if (i % 3 === 0 && i % 5 === 0){
+            document.write('fizzbuzz number= ' + i + ' ');
+         
+
+        } 
+        document.write('<br>');
+        i++;
+        
+      }
+}
+
+function fibonacci() {
+
+
+var number = [0, 1];
+for(var i=number.length; i<10; i++) {
+    number[i] = number[i-2] + number[i-1];
+}
+document.write(number);
+} 
+
+</script>
+</body>
+
+
+</html>
+
+
+
