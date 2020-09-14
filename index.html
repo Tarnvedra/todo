@@ -1,62 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 <style>
-body {background-color: whitesmoke; }
-h1 {margin-left: 775px;color: black; font-size: 40px}
-a {margin-left: 790px;color: black; font-size: 40px}
-#app {margin-left: 790px;color: black; font-size: 40px}
+body { font-family: 'Roboto Slab', serif; background-color: whitesmoke;}
+h1, h2 {text-align: center;color: black; font-size: 40px}
+#app {text-align: center;color: black; font-size: 40px}
+.add-todo {width:100px;height:125px; background-color: mediumblue;color:white;}
+.todo-list {width:300px; height:75px ;color:black;font-size:50px;}
+#edit {width:100px;height:75px; background-color: mediumseagreen;color:white;}
+#delete {width:100px;height:75px; background-color: red;color:white;}
+.todos{margin-left: 650px;text-align:center}
+ul {list-style: none;}
 </style>
     
 </head>
 <body>
- <h1>Todo List</h1>
- <a href="index.html">Return Home </a>
-<div id="app">
- <button type="button" onclick="">Add</button>
- <button type="button" onclick="">Edit</button>
- <button type="button" onclick="">Delete</button>
-</div>
+  <header>
+     <h1>Todo List</h1>
+    <h2 id="date">Todays Date:</h2>
+  </header>
+  <div id="app">
+      <form>
+         <input type="text" id="todo" value="" class="todo-list" placeholder="add a todo">    
+        <button class="add-todo" type="button" onclick="addTodo()">Add</button>
+     </form>
+     <div id="todo-list"></div>
+  </div>
 
 <script>
 
-function fizzBuzz() {
+var todos = [];
+var number = 0;
 
-   
-    i = 1;
-    text = "";
-    while (i <= 100) {
-        if (i % 3 === 0){
-            document.write('fizz number= ' + i + ' ');
-           
 
-        } 
-        if (i % 5 === 0){
-            document.write('buzz number= ' + i + ' ');
-          
+let today = new Date().toLocaleDateString()
+document.getElementById("date").innerHTML = today;
 
-        } 
-        if (i % 3 === 0 && i % 5 === 0){
-            document.write('fizzbuzz number= ' + i + ' ');
-         
-
-        } 
-        document.write('<br>');
-        i++;
-        
-      }
+function addTodo() {
+document.getElementById('todo-list').innerHTML = "";
+newTodo = document.getElementById('todo').value;
+todos[number] = ' ';
+todos[number] = todos[number] + newTodo;
+number = number + 1
+displayTodos();
 }
 
-function fibonacci() {
+function displayTodos () {
 
-
-var number = [0, 1];
-for(var i=number.length; i<10; i++) {
-    number[i] = number[i-2] + number[i-1];
+   ul = document.createElement('ul');
+   document.getElementById('todo-list').appendChild(ul);
+   todos.forEach(function (todos) {
+      let li = document.createElement('li');
+      ul.appendChild(li);
+      li.innerHTML += todos; });
 }
-document.write(number);
-} 
 
 </script>
 </body>
