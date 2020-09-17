@@ -12,9 +12,9 @@ h1, h2 {text-align: center;color: black; font-size: 40px}
 .add-todo {width:100px;height:125px; background-color: mediumblue;color:white;}
 .todo-list {width:300px; height:75px ;color:black;font-size:50px;}
 #edit {width:100px;height:75px; background-color: mediumseagreen;color:white;}
-#delete {width:100px;height:75px; background-color: red;color:white;}
+.delete {margin:10px;padding: 10px;width:50px;height:50px; background-color: red;color:white;}
 .todos{margin-left: 650px;text-align:center}
-ul {list-style: none;}
+ul {list-style: none ;}
 </style>
     
 </head>
@@ -39,7 +39,7 @@ var number = 0;
 
 let today = new Date().toLocaleDateString()
 document.getElementById("date").innerHTML = today;
-
+document.addEventListener('click' , d)
 function addTodo() {
 document.getElementById('todo-list').innerHTML = "";
 newTodo = document.getElementById('todo').value;
@@ -56,7 +56,12 @@ function displayTodos () {
    todos.forEach(function (todos) {
       let li = document.createElement('li');
       ul.appendChild(li);
-      li.innerHTML += todos; });
+      let button = document.createElement('button');
+      var buttonText = document.createTextNode("X"); 
+      button.appendChild(buttonText); 
+      button.className = "delete";
+      li.innerHTML += todos;
+      li.appendChild(button); });
 }
 
 </script>
