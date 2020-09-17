@@ -10,7 +10,7 @@ body { font-family: 'Roboto Slab', serif; background-color: whitesmoke;}
 h1, h2 {text-align: center;color: black; font-size: 40px}
 #app {text-align: center;color: black; font-size: 40px}
 .add-todo {width:100px;height:125px; background-color: mediumblue;color:white;}
-.todo-list {width:300px; height:75px ;color:black;font-size:50px;}
+#todo {width:300px; height:75px ;color:black;font-size:50px;}
 #edit {width:100px;height:75px; background-color: mediumseagreen;color:white;}
 .delete {margin:10px;padding: 10px;width:50px;height:50px; background-color: red;color:white;}
 .todos{margin-left: 650px;text-align:center}
@@ -25,49 +25,47 @@ ul {list-style: none ;}
   </header>
   <div id="app">
       <form>
-         <input type="text" id="todo" value="" class="todo-list" placeholder="add a todo">    
+         <input type="text" id="todo" value="" placeholder="add a todo">    
         <button class="add-todo" type="button" onclick="addTodo()">Add</button>
      </form>
      <div id="todo-list"></div>
   </div>
 
 <script>
-
+// init variables
 var todos = [];
-var number = 0;
-
-
+var counter = 0;
+// get todays date
 let today = new Date().toLocaleDateString()
 document.getElementById("date").innerHTML = today;
-document.addEventListener('click' , d)
+// add a new todo
 function addTodo() {
-document.getElementById('todo-list').innerHTML = "";
-newTodo = document.getElementById('todo').value;
-todos[number] = ' ';
-todos[number] = todos[number] + newTodo;
-number = number + 1
-displayTodos();
+            document.getElementById('todo-list').innerHTML = "";
+            newTodo = document.getElementById('todo').value;
+            todos[counter] = ' ';
+            todos[counter] = todos[counter] + newTodo;
+            counter = counter + 1;
+            displayTodos();
+            
 }
-
+// display all todos added
 function displayTodos () {
-
-   ul = document.createElement('ul');
-   document.getElementById('todo-list').appendChild(ul);
-   todos.forEach(function (todos) {
-      let li = document.createElement('li');
-      ul.appendChild(li);
-      let button = document.createElement('button');
-      var buttonText = document.createTextNode("X"); 
-      button.appendChild(buttonText); 
-      button.className = "delete";
-      li.innerHTML += todos;
-      li.appendChild(button); });
+            ul = document.createElement('ul');
+            document.getElementById('todo-list').appendChild(ul);
+            todos.forEach(function (todos)
+                     {
+                        let li = document.createElement('li');
+                        ul.appendChild(li);
+                        let button = document.createElement('button');
+                        var buttonText = document.createTextNode("X"); 
+                        button.appendChild(buttonText); 
+                        button.className = "delete";
+                        li.innerHTML += todos;
+                        li.appendChild(button); 
+                     });
 }
-
 </script>
 </body>
-
-
 </html>
 
 
