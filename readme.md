@@ -1,1 +1,1 @@
-Mini-project (SPA) fizzbuzz and friends written in HTML5, CSS3 and JavaScript.
+Mini-project (SPA) todo list app written in HTML5, CSS3 and JavaScript.
