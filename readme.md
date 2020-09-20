@@ -1,1 +1,1 @@
-Mini-project (SPA) (No Frameworks) Todo App written in HTML5, CSS3 and vanilla JavaScript.
+Mini-project (SPA) fizzbuzz and friends written in HTML5, CSS3 and JavaScript.
