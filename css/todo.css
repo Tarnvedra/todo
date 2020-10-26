@@ -1,0 +1,109 @@
+body {
+    margin: 0px;
+    font-family: 'Roboto Slab', serif;
+    background-image: linear-gradient(120deg ,  #caeccf,#bee9e4 );
+}
+    .navbar{
+        margin-bottom: 0;
+        border-radius: 0;
+        background-color: lightgrey;
+        color: #FFF;
+        padding: 1% 0;
+        font-size: 1.2em;
+        border: 0;
+        }
+    .navbar-brand{
+        float: left;
+        min-height: 55px;
+        padding: 0 15px 5px;
+    }
+    
+   
+
+  
+    #icon {
+        max-width: 100px;
+        margin: 1% auto;
+    }
+    .container{
+        margin: 4% auto;
+    }
+
+    .responsive {
+        width: 100%;
+        height: auto;
+
+    }
+
+  
+
+    .jumbotron {
+        margin: 0;
+    }
+
+    
+   
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+
+      .navbar-brand img {
+        width:50px;
+        height:50px;
+      }
+
+
+    
+
+.footer-text {
+	color: white;
+	
+}
+
+h3 {
+    color:white;
+}
+
+#about {
+
+    font-size-adjust: 20px;
+} 
+
+p {
+    margin-top: 2em ;
+    margin-bottom: 2em ;
+   
+  }
+
+a #logo {
+background-color:grey;
+  }
+
+#app {
+    text-align: center;
+    margin-left: 100px;
+}
+
+
+#todo-list ul {list-style: none ;}
+#todo-list li {display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 24px;
+    grid-column-gap: 16px;}
+#todo-list button{margin-left:2px; margin-bottom: 2px; width:50px; height:35px}
+#app {margin: auto ; width: auto; padding:10px;}
+#todo-list{text-align: center;}
+
+
+
+footer .btn {
+    border: none;
+    font-size: 18px;
+    color: #FFF;
+    padding: 12px 22px;
+    background: #1E90FF;
+   
+  
+}
